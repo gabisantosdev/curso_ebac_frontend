@@ -1,0 +1,126 @@
+/* Reset CSS */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Variáveis */
+:root {
+  --cor-01: #000000;
+  --cor-02: #003E3E;
+  --cor-03: #007C7C;
+  --cor-04: #00BABA;
+  --cor-05: #00F8F8;
+}
+
+header>.container,
+section {
+  max-width: 1336px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Cabeçalho */
+body>header,
+footer {
+  background-color: var(--cor-01);
+}
+
+h1 {
+  font-size: 38px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+header .container li {
+  list-style: none;
+}
+
+header .container nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+header .container nav ul a {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+header .container nav ul a:hover {
+  color: var(--cor-04);
+}
+
+/* Artigo */
+section .container {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+section .container h2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 34px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+section .container h3 {
+  font-size: 24px;
+  margin: 10px 0 10px 0;
+}
+
+article {
+  width: 30%;
+  margin: 1%;
+}
+
+article img {
+  width: 100%;
+}
+
+.articles #sports {
+  background-color: var(--cor-03);
+}
+
+.articles #economy {
+  background-color: var(--cor-02);
+}
+
+.articles #entertainment {
+  background-color: var(--cor-03);
+}
+
+.articles #technology {
+  background-color: var(--cor-02);
+}
+
+.articles a {
+  font-weight: bold;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 4px;
+  padding: 5px;
+  color: var(--cor-02);
+  background-color: var(--cor-05);
+  transition: 0.3s;
+}
+
+.articles a:hover {
+  background-color: var(--cor-04);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
