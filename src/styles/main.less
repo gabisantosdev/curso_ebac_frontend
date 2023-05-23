@@ -1,0 +1,144 @@
+@import "mapas.less";
+@breakpointMobile: ~"(max-width: 767px)";
+@beakpointTablet: ~"(min-width: 768px) and (max-width: 1023px)";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #colors[backgroundColor];
+}
+
+li {
+  list-style: none;
+}
+
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+
+  @media @beakpointTablet {
+    max-width: 80%;
+  }
+
+  @media @breakpointMobile {
+    max-width: 70%;
+  }
+}
+
+header {
+  background-color: #colors[backgroundColorSecundary];
+  position: sticky;
+  top: 0;
+  left: 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+
+    .menu {
+      display: flex;
+
+      li {
+        font-weight: bold;
+        margin-left: 1.5rem;
+
+        a {
+          color: #colors[textColor];
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+section {
+  padding: 3.5rem 0;
+
+  .products {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+
+    &-item {
+      img {
+        width: 100%;
+        border-radius: 1rem;
+      }
+
+      @media @breakpointMobile {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &-button {
+      display: block;
+      background-color: #colors[buttonColor];
+      color: #fff;
+      text-align: center;
+      padding: .5rem 0;
+      border-radius: .5rem;
+      margin-top: .5rem;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #colors[buttonHover];
+      }
+    }
+
+    @media @beakpointTablet {
+      grid-template-columns: repeat(2, 48.5%);
+      column-gap: 3%;
+    }
+
+    @media @breakpointMobile {
+      display: block;
+    }
+  }
+}
+
+footer {
+  background-color: #colors[backgroundColorSecundary];
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .social-links {
+    display: flex;
+    margin-bottom: 1rem;
+
+    li {
+      margin-right: 1rem;
+      transition: all ease .3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  span {
+    color: #colors[textColor];
+
+    a {
+      text-decoration: none;
+      color: #colors[textColor];
+    }
+  }
+}
