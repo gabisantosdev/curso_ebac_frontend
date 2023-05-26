@@ -4,7 +4,7 @@ module.exports = function (grunt) {
     less: {
       development: {
         files: {
-          'main.css': 'main.less'
+          './dist/styles/main.css': './src/styles/main.less'
         }
       },
       production: {
@@ -12,23 +12,22 @@ module.exports = function (grunt) {
           compress: true,
         },
         files: {
-          'main.min.css': 'main.less'
+          './dist/styles/main.min.css': './src/styles/main.less'
         }
       }
     },
     uglify: {
       target: {
         files: {
-          'main.min.js': 'main.js'
+          './dist/scripts/main.min.js': './src/scripts/main.js'
         }
       }
     }
   })
 
-  grunt.loadNpmTasks('grunt-contrib-less'); // Carregando o plugin do LESS
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
-  grunt.registerTask('default', ['less', 'uglify']); //Execultando os registros
-  // grunt.registerTask('build', ['less:production', 'replace:dist', 'clean', 'uglify']);
+  grunt.registerTask('default', ['less', 'uglify']);
 }
